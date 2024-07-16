@@ -7,12 +7,16 @@ import {
   Route
 } from "react-router-dom";
 
+import './styles/normalize.css'
+import GlobalStyle from './styles/createGlobalStyle.jsx'
+
 import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
+    <GlobalStyle/>
         <Routes>
           <Route path="/" element={<Home />}/>
         </Routes>
