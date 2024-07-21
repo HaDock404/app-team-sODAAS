@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -10,18 +10,17 @@ import {
 import './styles/normalize.css'
 import GlobalStyle from './styles/createGlobalStyle.jsx'
 
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <GlobalStyle/>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<HomePage />}/>
         </Routes>
-    <React.StrictMode></React.StrictMode>
-  </BrowserRouter>,
+  </HashRouter>,
 );
 
 // If you want to start measuring performance in your app, pass a function
