@@ -1,25 +1,34 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { LanguageContext } from './LanguageContext';
 import '../styles/dropdown.css'
 import WorldIcon from './WorldIcon.jsx'
 
 function Dropdown() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
+
     const { language, setLanguage } = useContext(LanguageContext);
 
     const handleLanguageChange = (lang) => {
+        setIsOpen(!isOpen);
         setLanguage(lang);
     };
 
     return (
-        <div class="dropdown">
-            <div>
-                <WorldIcon />
-                <button className="dropbtn">{language.toUpperCase()}</button>
-            </div>
-            <div className="dropdown-content">
-                <a onClick={() => handleLanguageChange('en')}>EN</a>
-                <a onClick={() => handleLanguageChange('fr')}>FR</a>
-            </div>
+        <div className="dropdown">
+           
+            <button onClick={toggleDropdown} className="dropdown-button">
+                {language.toUpperCase()}
+            </button>
+            {isOpen && (
+                <div className="dropdown-menu">
+                    <a className="dropdown-item" onClick={() => handleLanguageChange('en')}>EN</a>
+                    <a className="dropdown-item" onClick={() => handleLanguageChange('pl')}>PL</a>
+                </div>
+            )}
         </div>
     )
 }

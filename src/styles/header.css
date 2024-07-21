@@ -27,24 +27,20 @@ body {
 }
 
 .nav-links {
+    color: white;
     display: flex;
     align-items: center;
 }
 
-.nav-links a {
+.underline-on-hover {
+    position: relative;
     color: white;
+    cursor: pointer;
+    overflow: hidden;
     text-decoration: none;
     margin-left: 20px;
     padding: 10px;
     transition: background-color 0.3s;
-}
-
-.underline-on-hover {
-    position: relative;
-
-    color: white;
-    cursor: pointer;
-    overflow: hidden;
 }
 
 .underline-on-hover::before {
@@ -61,4 +57,8 @@ body {
 .underline-on-hover:hover::before {
     width: 100%;
     left: 0;
+}
+
+.lang-menu {
+    margin-left: 100px;
 }
