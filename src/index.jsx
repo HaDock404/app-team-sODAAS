@@ -13,13 +13,17 @@ import GlobalStyle from './styles/createGlobalStyle.jsx'
 import HomePage from './pages/HomePage';
 import reportWebVitals from './reportWebVitals';
 
+import { LanguageProvider } from './components/LanguageContext';
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HashRouter>
+    <LanguageProvider>
     <GlobalStyle/>
         <Routes>
           <Route path="/" element={<HomePage />}/>
         </Routes>
+      </LanguageProvider>
   </HashRouter>,
 );
 
