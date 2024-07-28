@@ -7,13 +7,17 @@ import {
   Route
 } from "react-router-dom";
 
+
 import './styles/normalize.css'
 import GlobalStyle from './styles/createGlobalStyle.jsx'
 
-import HomePage from './pages/HomePage';
 import reportWebVitals from './reportWebVitals';
-
 import { LanguageProvider } from './components/LanguageContext';
+
+import HomePage from './pages/HomePage';
+import AboutUs from './pages/AboutUs'
+
+import ErrorPage from './components/ErrorPage';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +26,9 @@ root.render(
     <GlobalStyle/>
         <Routes>
           <Route path="/" element={<HomePage />}/>
+          <Route path="/app-team-sodaas/About_us" element={<AboutUs />}/>
+
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </LanguageProvider>
   </HashRouter>,

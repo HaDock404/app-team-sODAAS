@@ -6,7 +6,7 @@ function TextComponent() {
 
     const texts = {
         en: 'Hello, world!',
-        fr: 'Bonjour, le monde!'
+        pl: 'Witaj świecie'
     };
 
     return <p>{texts[language]}</p>;
