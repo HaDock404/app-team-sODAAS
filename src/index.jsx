@@ -15,6 +15,7 @@ import reportWebVitals from './reportWebVitals';
 import { LanguageProvider } from './components/LanguageContext';
 
 import HomePage from './pages/HomePage';
+import HomeTest from './pages/HomeTest'
 import AboutUs from './pages/AboutUs'
 
 import ErrorPage from './components/ErrorPage';
@@ -26,7 +27,8 @@ root.render(
     <GlobalStyle/>
         <Routes>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/app-team-sodaas/About_us" element={<AboutUs />}/>
+          <Route path="/bis" element={<HomeTest />}/>
+          <Route path="/About_us" element={<AboutUs />}/>
 
           <Route path="*" element={<ErrorPage />} />
         </Routes>
