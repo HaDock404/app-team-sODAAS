@@ -16,6 +16,7 @@ import { LanguageProvider } from './components/LanguageContext';
 
 import HomePage from './pages/HomePage';
 import HomeTest from './pages/HomeTest'
+import HomeTest2 from './pages/HomeTest2'
 import AboutUs from './pages/AboutUs'
 
 import ErrorPage from './components/ErrorPage';
@@ -28,6 +29,7 @@ root.render(
         <Routes>
           <Route path="/" element={<HomePage />}/>
           <Route path="/bis" element={<HomeTest />}/>
+          <Route path="/bis2" element={<HomeTest2 />}/>
           <Route path="/About_us" element={<AboutUs />}/>
 
           <Route path="*" element={<ErrorPage />} />

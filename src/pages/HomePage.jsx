@@ -9,6 +9,7 @@ function HomePage() {
       <Header />
       <TextComponent />
       <Link  to="/bis"> click me</Link>
+      <Link  to="/bis2"> click me</Link>
     </>
   );
 }
